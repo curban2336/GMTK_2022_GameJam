@@ -15,11 +15,11 @@ D:/Github/Real github/GMTK_2022_GameJam/GMTK_2022_GameJam/Project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52039
+52878
 Successfully changed project path to: D:/Github/Real github/GMTK_2022_GameJam/GMTK_2022_GameJam/Project
 D:/Github/Real github/GMTK_2022_GameJam/GMTK_2022_GameJam/Project
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 22.70 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 23.97 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.13f1 (71691879b7f5)
 [Subsystems] Discovering subsystems at path C:/Program Files/2020.3.13f1/Editor/Data/Resources/UnitySubsystems
@@ -35,40 +35,40 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/2020.3.13f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/2020.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/2020.3.13f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56320
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56024
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/2020.3.13f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/2020.3.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001821 seconds.
+Registered in 0.001793 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 23.07 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 23.11 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.013 seconds
+- Completed reload, in  2.203 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002334 seconds.
+Registered in 0.002195 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.26 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.811 seconds
+- Completed reload, in  0.840 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
 Refreshing native plugins compatible for Editor in 0.25 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 64.7 MB.
+Unloading 1391 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 64.8 MB.
 System memory in use after: 64.8 MB.
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1823.
-Total: 1.492300 ms (FindLiveObjects: 0.122900 ms CreateObjectMapping: 0.039800 ms MarkObjects: 1.266600 ms  DeleteObjects: 0.062000 ms)
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1824.
+Total: 1.499800 ms (FindLiveObjects: 0.125800 ms CreateObjectMapping: 0.039100 ms MarkObjects: 1.271700 ms  DeleteObjects: 0.062200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -82,25 +82,457 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes
-  artifactKey: Guid(7726fb5a56849b84fb0f895b3659fa0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes using Guid(7726fb5a56849b84fb0f895b3659fa0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e114046db6bfb222786c7cf46b49e62') in 0.003273 seconds 
-  Import took 0.004964 seconds .
+  path: Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Bark2.wav
+  artifactKey: Guid(c068c9a50adb19f4290a8715ebc00eb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Bark2.wav using Guid(c068c9a50adb19f4290a8715ebc00eb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5c1888a66faa9d34fc272ed42fbc670') in 0.090070 seconds 
+  Import took 0.091954 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.204109 seconds.
-  path: Assets/Scenes/Prototype.unity
-  artifactKey: Guid(455504c5d0eb49c4ab60ea61d38f9cdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Prototype.unity using Guid(455504c5d0eb49c4ab60ea61d38f9cdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c5971ce008ad345637190d85e9872e0') in 0.008499 seconds 
-  Import took 0.010549 seconds .
+  Time since last request: 0.000239 seconds.
+  path: Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Growl.wav
+  artifactKey: Guid(f97c37a10f60cd243b9ff41990a66eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Growl.wav using Guid(f97c37a10f60cd243b9ff41990a66eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cd5b94f0c1477c8eb3b32b154909802') in 0.009742 seconds 
+  Import took 0.011604 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 17.478840 seconds.
-  path: Assets/Scenes/Asset_Build.unity
-  artifactKey: Guid(d4c211be38c15014db148b9b2db483b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Asset_Build.unity using Guid(d4c211be38c15014db148b9b2db483b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f795cebfb6b7e811ec533072d15fb637') in 0.001989 seconds 
-  Import took 0.004131 seconds .
+  Time since last request: 0.000258 seconds.
+  path: Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Roar4.wav
+  artifactKey: Guid(ce79ddf7260e27d47938755631a4a8a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Roar4.wav using Guid(ce79ddf7260e27d47938755631a4a8a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13b61a660a60284e844ef750f29b376c') in 0.007997 seconds 
+  Import took 0.010132 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000324 seconds.
+  path: Assets/PBRPachycephalasaurus/Audio Clips
+  artifactKey: Guid(8b914b2b8df65254db299417cd06b359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Audio Clips using Guid(8b914b2b8df65254db299417cd06b359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd39d1087b2d797037bc2aaf50a7f3f05') in 0.001883 seconds 
+  Import took 0.004192 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Yelp2.wav
+  artifactKey: Guid(9057bc68cd44c694db7359ef635d19a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Yelp2.wav using Guid(9057bc68cd44c694db7359ef635d19a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '785748a7967d4cdb9476e85f6b8771dc') in 0.007260 seconds 
+  Import took 0.009294 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Growl2.wav
+  artifactKey: Guid(2d1f2a4aa98bd9c48966272cacae8557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Growl2.wav using Guid(2d1f2a4aa98bd9c48966272cacae8557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e908784ebf6ae684974ec258919cdd5') in 0.015425 seconds 
+  Import took 0.017496 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000373 seconds.
+  path: Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Death2.wav
+  artifactKey: Guid(cf15a062df9d94549b0c1e492492803d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Death2.wav using Guid(cf15a062df9d94549b0c1e492492803d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2d86283fa4781425d67c2219702d1f1') in 0.006809 seconds 
+  Import took 0.008961 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000397 seconds.
+  path: Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Roar3.wav
+  artifactKey: Guid(b49dc10182f6cfc4d913e1d547c020f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Roar3.wav using Guid(b49dc10182f6cfc4d913e1d547c020f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a00dbb489bc29a30a94e44f8882b436a') in 0.008626 seconds 
+  Import took 0.011061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000270 seconds.
+  path: Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Yelp.wav
+  artifactKey: Guid(88f074a5c9ed3204988bda170ee58467) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Yelp.wav using Guid(88f074a5c9ed3204988bda170ee58467) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c65fb5536104cf185bfb554adb0e060') in 0.008182 seconds 
+  Import took 0.010187 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000584 seconds.
+  path: Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Roar.wav
+  artifactKey: Guid(e3853a6317018714faf77584b0865411) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Roar.wav using Guid(e3853a6317018714faf77584b0865411) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f786064880472544130931c33625900') in 0.007607 seconds 
+  Import took 0.009891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000381 seconds.
+  path: Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Yelp3.wav
+  artifactKey: Guid(813cfec78a0fa6b4bac0b6e32b7d1027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Yelp3.wav using Guid(813cfec78a0fa6b4bac0b6e32b7d1027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7349dbdef5df9ab0aed5f6ffe8ae66bc') in 0.008603 seconds 
+  Import took 0.010708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000353 seconds.
+  path: Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Death.wav
+  artifactKey: Guid(79130466c94e6434e8fe1e107a4d9f60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Death.wav using Guid(79130466c94e6434e8fe1e107a4d9f60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3415e4f50d96680226b58d2e116ad78') in 0.007617 seconds 
+  Import took 0.009822 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Bark.wav
+  artifactKey: Guid(49d942e704816f34a891a4409866ddc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Bark.wav using Guid(49d942e704816f34a891a4409866ddc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65ee2426f2fc357fa02bb70c86909d88') in 0.008740 seconds 
+  Import took 0.011429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000349 seconds.
+  path: Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Roar2.wav
+  artifactKey: Guid(d6d2bb424b3d75f43abc6c2403e3d03c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Audio Clips/Pachycephalosaurus_Roar2.wav using Guid(d6d2bb424b3d75f43abc6c2403e3d03c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0300de9e7bc7d2b05a90a230e816676') in 0.008538 seconds 
+  Import took 0.010637 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.022655 seconds.
+  path: Assets/FST
+  artifactKey: Guid(c33a52157d969ba438db7ed764d85b2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST using Guid(c33a52157d969ba438db7ed764d85b2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1db3d95e65f89380026134ac0335116') in 0.001636 seconds 
+  Import took 0.003998 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.752491 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena
+  artifactKey: Guid(3dfc67cf1d4d8e34d8c38b3ce95ff24b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena using Guid(3dfc67cf1d4d8e34d8c38b3ce95ff24b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1319a0574feb5e98e9070cbb0519bd5b') in 0.001454 seconds 
+  Import took 0.003642 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.076858 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Gladiator Low Poly Arena.fbx
+  artifactKey: Guid(c685db5bd3a0f9b4d8ddb667b78d772f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Gladiator Low Poly Arena.fbx using Guid(c685db5bd3a0f9b4d8ddb667b78d772f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f93b8d4b173599ac7d636626fb3c31b') in 0.577598 seconds 
+  Import took 0.580403 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.282849 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Materials
+  artifactKey: Guid(30fc057d0e4749a49ba512be799860ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Materials using Guid(30fc057d0e4749a49ba512be799860ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f2b05c4bf207777b7ade4c45561b31d') in 0.001536 seconds 
+  Import took 0.003978 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.081795 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Materials/ArenaGate.mat
+  artifactKey: Guid(f15102c53ac84594a9c1a64bfa312c66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Materials/ArenaGate.mat using Guid(f15102c53ac84594a9c1a64bfa312c66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9893472d93777f8f62c65b25fe71b259') in 0.028253 seconds 
+  Import took 0.030297 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Materials/FlagPoleMaterial.mat
+  artifactKey: Guid(5b80fe49dc5191848bad2bdbdeae965d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Materials/FlagPoleMaterial.mat using Guid(5b80fe49dc5191848bad2bdbdeae965d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdac1d35f4e49e42e8de203ffb07bd07') in 0.011540 seconds 
+  Import took 0.013537 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000360 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Materials/PillarsMaterial.mat
+  artifactKey: Guid(4d5450caebd16874c810ac0b917ea0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Materials/PillarsMaterial.mat using Guid(4d5450caebd16874c810ac0b917ea0ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b354f45b03d13ba7edd621d53676f91') in 0.019257 seconds 
+  Import took 0.021849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000528 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Materials/WoodSpike.mat
+  artifactKey: Guid(733305d27cc44fa4bb93047578ed6418) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Materials/WoodSpike.mat using Guid(733305d27cc44fa4bb93047578ed6418) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a19aa0f1df73f52410b650f703dd026a') in 0.016368 seconds 
+  Import took 0.019151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Materials/Flag.mat
+  artifactKey: Guid(10c909074d284a348a18dea39472a898) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Materials/Flag.mat using Guid(10c909074d284a348a18dea39472a898) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0905f3f7c792faf9b4a16009a54068dc') in 0.011036 seconds 
+  Import took 0.013372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Materials/ArenaMaterial.mat
+  artifactKey: Guid(c07a83a7d48b561409f63d90157db441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Materials/ArenaMaterial.mat using Guid(c07a83a7d48b561409f63d90157db441) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cda24ebd1100ffbacf1d8a55b88f3b94') in 0.010471 seconds 
+  Import took 0.012912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Materials/plane.mat
+  artifactKey: Guid(9e34fa3af83adc04fa00b1229fad3609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Materials/plane.mat using Guid(9e34fa3af83adc04fa00b1229fad3609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f709e3f46e8d9cc1bb2eac4105d5519') in 0.007067 seconds 
+  Import took 0.009359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Materials/MechanismMaterial.mat
+  artifactKey: Guid(817be96ef01542047ac875ec7d8a7bc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Materials/MechanismMaterial.mat using Guid(817be96ef01542047ac875ec7d8a7bc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c21b0ff2d3bce0fda60db4a48022814b') in 0.009892 seconds 
+  Import took 0.012143 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.230425 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Prefabs
+  artifactKey: Guid(1b4bbe1694ef36242ab21166b57e3c19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Prefabs using Guid(1b4bbe1694ef36242ab21166b57e3c19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a95433d13d9c7be343d36dada3aba74') in 0.001470 seconds 
+  Import took 0.003916 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.064464 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Prefabs/Gladiator Low Poly Arena.prefab
+  artifactKey: Guid(4a769d0345654f345be733003b50a3e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Prefabs/Gladiator Low Poly Arena.prefab using Guid(4a769d0345654f345be733003b50a3e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '547b1198d97176b9a2763adb79e0d571') in 0.029159 seconds 
+  Import took 0.032132 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.648584 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures
+  artifactKey: Guid(0826df5fb7e4cdf4eaebb0f5f7850c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures using Guid(0826df5fb7e4cdf4eaebb0f5f7850c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c71668f36463adcd5418989c40d5bcf') in 0.001630 seconds 
+  Import took 0.004078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.085327 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/Arena-Albedo.png
+  artifactKey: Guid(745e182913db1d9438d7b0b9b233dab0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/Arena-Albedo.png using Guid(745e182913db1d9438d7b0b9b233dab0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c45c34d202d230309d7f9bbf781b110') in 0.012141 seconds 
+  Import took 0.014327 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/Mechanism-NM.png
+  artifactKey: Guid(a12376109b0ee84448003b01683f9c98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/Mechanism-NM.png using Guid(a12376109b0ee84448003b01683f9c98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '415bb225f2b6e5a916df6e2d32a8ced0') in 0.011473 seconds 
+  Import took 0.013875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000340 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/Flags-NM.png
+  artifactKey: Guid(7bdc17845795d424c9a2cc0213219549) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/Flags-NM.png using Guid(7bdc17845795d424c9a2cc0213219549) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0757b01a9c021a6a1d0ea045f1830bb4') in 0.008529 seconds 
+  Import took 0.011878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/GateArena-Albedo.png
+  artifactKey: Guid(bf8eccc80fa89c84c87f991024530a8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/GateArena-Albedo.png using Guid(bf8eccc80fa89c84c87f991024530a8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1b496bfd83b468765d1a5119f401672') in 0.006941 seconds 
+  Import took 0.009561 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/Arena-NM.png
+  artifactKey: Guid(6d7cd774906d788409069b881209e1c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/Arena-NM.png using Guid(6d7cd774906d788409069b881209e1c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16f578e91d52fe568520d4fc061a49d3') in 0.007608 seconds 
+  Import took 0.010062 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/Flags-Albedo.png
+  artifactKey: Guid(df098a30d98a3414ebe4adadce18ed3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/Flags-Albedo.png using Guid(df098a30d98a3414ebe4adadce18ed3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83f295462160837bd048fb1c0aa76ac5') in 0.007605 seconds 
+  Import took 0.010262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/Pillars-NM.png
+  artifactKey: Guid(37a7691b74d6a2e449fa71abc9b4e81b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/Pillars-NM.png using Guid(37a7691b74d6a2e449fa71abc9b4e81b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7595740cb07b191437ba1c9854393d6') in 0.008090 seconds 
+  Import took 0.010136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/WoodSpikes-AO.png
+  artifactKey: Guid(7b168262c0343be41abb913e9fa1922e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/WoodSpikes-AO.png using Guid(7b168262c0343be41abb913e9fa1922e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c425b26c8b8366f70609d920c152c346') in 0.008457 seconds 
+  Import took 0.010755 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/GateArena-NM.png
+  artifactKey: Guid(f44d2a0543ab16340a79c585b4a57667) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/GateArena-NM.png using Guid(f44d2a0543ab16340a79c585b4a57667) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3339182d0f71a2f24b8733c23f22bb4e') in 0.007243 seconds 
+  Import took 0.009398 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/Pillars-Albedo.png
+  artifactKey: Guid(5b59fbf70dbe52c4c9212b68ae1f7842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/Pillars-Albedo.png using Guid(5b59fbf70dbe52c4c9212b68ae1f7842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3cf2ead52c9aa57bda90843581fde43') in 0.007370 seconds 
+  Import took 0.010072 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000288 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/Arena-AO.png
+  artifactKey: Guid(c2ad5f3bc7367ad4ea3abf5e97789bb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/Arena-AO.png using Guid(c2ad5f3bc7367ad4ea3abf5e97789bb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '045dc945e9ad484e2891fb639c1d3cd7') in 0.006950 seconds 
+  Import took 0.008936 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/WoodSpikes-NM.png
+  artifactKey: Guid(399427ee6d10f0f4cba969a01ce98d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/WoodSpikes-NM.png using Guid(399427ee6d10f0f4cba969a01ce98d01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0da5dfd756b11dc6f7127600292f8856') in 0.010805 seconds 
+  Import took 0.012785 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/GateArena-AO.png
+  artifactKey: Guid(92f6fabd0f39a1646afc55a47dd24f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/GateArena-AO.png using Guid(92f6fabd0f39a1646afc55a47dd24f11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18cbc6fb9ca6efd13a33a837cf215d62') in 0.009761 seconds 
+  Import took 0.011975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/FlagPole-NM.png
+  artifactKey: Guid(5c0186702d6fa1c42a55597d6a13100a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/FlagPole-NM.png using Guid(5c0186702d6fa1c42a55597d6a13100a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc7aaf432819a844fa94788eabd5fa63') in 0.008017 seconds 
+  Import took 0.010174 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/Mechanism-AO.png
+  artifactKey: Guid(9718345c54aff5a4ebc325f3ebe7a534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/Mechanism-AO.png using Guid(9718345c54aff5a4ebc325f3ebe7a534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a461e6bfd826f6fd7cd97ce0a82c1186') in 0.008553 seconds 
+  Import took 0.011153 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/Mechanism-Albedo.png
+  artifactKey: Guid(a515ad33c41fb0f47b8d47e3ee3f94e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/Mechanism-Albedo.png using Guid(a515ad33c41fb0f47b8d47e3ee3f94e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb673ca65260dac92c4fb06dc968bc86') in 0.007063 seconds 
+  Import took 0.009303 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/Pillars-AO.png
+  artifactKey: Guid(f6fe7573fcba8b44eb8b196b9de85de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/Pillars-AO.png using Guid(f6fe7573fcba8b44eb8b196b9de85de3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c1e11506a8a4a0894a77b883ad11a68') in 0.009441 seconds 
+  Import took 0.011710 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/FlagPole-AO.png
+  artifactKey: Guid(dcc11fdee51ea8c4faaee95885da39ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/FlagPole-AO.png using Guid(dcc11fdee51ea8c4faaee95885da39ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac815498b4d0b6f7ee0d70e0f59a9fb9') in 0.006737 seconds 
+  Import took 0.009294 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/WoodSpikes-Albedo.png
+  artifactKey: Guid(85b4237374027844398f08b3eff16578) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/WoodSpikes-Albedo.png using Guid(85b4237374027844398f08b3eff16578) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f6921b4e17867da25219dd0cb8cd3d6') in 0.006672 seconds 
+  Import took 0.008933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/Flags-AO.png
+  artifactKey: Guid(0b2b0b3d2c4cfda45aaf3fe4c1fa999e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/Flags-AO.png using Guid(0b2b0b3d2c4cfda45aaf3fe4c1fa999e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43a272976839376c7583004bd5ed1cbf') in 0.007408 seconds 
+  Import took 0.009521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/Textures/FlagPole-Albedo.png
+  artifactKey: Guid(34b8c66bf1ff1a7498057711d5ee71e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/Textures/FlagPole-Albedo.png using Guid(34b8c66bf1ff1a7498057711d5ee71e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd49b835181a81474957aaf1377fa0c04') in 0.007459 seconds 
+  Import took 0.009767 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.283465 seconds.
+  path: Assets/FST/Gladiators Low Poly Arena/_DemoScene.unity
+  artifactKey: Guid(93b77105f9661be4484a78c6a214e8c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FST/Gladiators Low Poly Arena/_DemoScene.unity using Guid(93b77105f9661be4484a78c6a214e8c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fecd44806bafb0dd7862cf5f4bd1645') in 0.002324 seconds 
+  Import took 0.004461 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 187.867180 seconds.
+  path: Assets/PBRPachycephalasaurus/Animators/DemoAnimatorB.controller
+  artifactKey: Guid(5424edbf499b1e642a57c38c2f616f5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Animators/DemoAnimatorB.controller using Guid(5424edbf499b1e642a57c38c2f616f5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fada5515df201555c40b2560df10e6b') in 0.008771 seconds 
+  Import took 0.011721 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.432851 seconds.
+  path: Assets/PBRPachycephalasaurus/Prefabs/PBR/Pachycephalasaurus_Blue.prefab
+  artifactKey: Guid(6761509ab734f0b46838eba6ca08c9cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Prefabs/PBR/Pachycephalasaurus_Blue.prefab using Guid(6761509ab734f0b46838eba6ca08c9cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77c93cb34b7e80089f11846cebcec310') in 0.595628 seconds 
+  Import took 0.599215 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/PBRPachycephalasaurus/Prefabs/PBR/Pachycephalasaurus_Red.prefab
+  artifactKey: Guid(3ed7edb8542883d44a8862055344408e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Prefabs/PBR/Pachycephalasaurus_Red.prefab using Guid(3ed7edb8542883d44a8862055344408e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2215d284f483d99060605c42486401f') in 0.035389 seconds 
+  Import took 0.038717 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/PBRPachycephalasaurus/Prefabs/PBR/Pachycephalasaurus_SandFemale.prefab
+  artifactKey: Guid(ddf65a445cb940a40a98c8bac0e8cb8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Prefabs/PBR/Pachycephalasaurus_SandFemale.prefab using Guid(ddf65a445cb940a40a98c8bac0e8cb8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a021a1af034803c6e1f175b7891ed47e') in 0.035273 seconds 
+  Import took 0.038779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000437 seconds.
+  path: Assets/PBRPachycephalasaurus/Prefabs/PBR/Pachycephalasaurus_SandMale.prefab
+  artifactKey: Guid(720be5f44e2e0d94881f325e2f294fbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Prefabs/PBR/Pachycephalasaurus_SandMale.prefab using Guid(720be5f44e2e0d94881f325e2f294fbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c07175df640e17e3963a8990971f68fe') in 0.035686 seconds 
+  Import took 0.039663 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/PBRPachycephalasaurus/Prefabs/PBR/Pachycephalasaurus_Green.prefab
+  artifactKey: Guid(96c1b02a29de12e4a8aa2acd97bcd7bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBRPachycephalasaurus/Prefabs/PBR/Pachycephalasaurus_Green.prefab using Guid(96c1b02a29de12e4a8aa2acd97bcd7bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '211272dc5b2111e026df128ebbed0207') in 0.036448 seconds 
+  Import took 0.039908 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
