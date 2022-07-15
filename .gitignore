@@ -65,3 +65,8 @@ docs/_site/
 **/.vsconfig
 
 **/UserSettings/
+
+*.md5
+*.json
+*.json
+*.log
