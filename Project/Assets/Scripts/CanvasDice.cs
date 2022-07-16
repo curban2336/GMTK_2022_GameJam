@@ -31,34 +31,34 @@ public class CanvasDice : MonoBehaviour
     [SerializeField] int twelveNum;
 
     //current number of dice in an action 
-    [SerializeField] int sixTallyB = 0;
-    [SerializeField] int eightTallyB = 0;
-    [SerializeField] int twelveTallyB = 0;
-    [SerializeField] int sixTallyAt = 0;
-    [SerializeField] int eightTallyAt = 0;
-    [SerializeField] int twelveTallyAt = 0;
-    [SerializeField] int sixTallyAb = 0;
-    [SerializeField] int eightTallyAb = 0;
-    [SerializeField] int twelveTallyAb = 0;
+    public int sixTallyB = 0;
+    public int eightTallyB = 0;
+    public int twelveTallyB = 0;
+    public int sixTallyAt = 0;
+    public int eightTallyAt = 0;
+    public int twelveTallyAt = 0;
+    public int sixTallyAb = 0;
+    public int eightTallyAb = 0;
+    public int twelveTallyAb = 0;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        sixNum = player.GetComponent(Player).totalD6s;
-        eightNum = player.GetComponent(Player).totalD8s;
-        twelveNum = player.GetComponent(Player).totalD12s;
-        sixCount.GetComponent<Text>().text = ($"{player.GetComponent(Player).totalD6s}");
-        eightCount.GetComponent<Text>().text = ($"{player.GetComponent(Player).totalD8s}");
-        twelveCount.GetComponent<Text>().text = ($"{player.GetComponent(Player).totalD12s}");
+        sixNum = player.GetComponent<Player>().totalD6s;
+        eightNum = player.GetComponent<Player>().totalD8s;
+        twelveNum = player.GetComponent<Player>().totalD12s;
+        sixCount.GetComponent<Text>().text = ($"{player.GetComponent<Player>().totalD6s}");
+        eightCount.GetComponent<Text>().text = ($"{player.GetComponent<Player>().totalD8s}");
+        twelveCount.GetComponent<Text>().text = ($"{player.GetComponent<Player>().totalD12s}");
         currentTally = tBlock;
     }
 
     //add one d12 to the selected action
     public void AddSix()
     {
-        if(sixNum >= player.GetComponent(Player).totalD6s)
+        if(sixNum >= player.GetComponent<Player>().totalD6s)
         {
 
         }
@@ -87,7 +87,7 @@ public class CanvasDice : MonoBehaviour
     //add one d12 to the selected action
     public void AddEight()
     {
-        if(eightNum >= player.GetComponent(Player).totalD8s)
+        if(eightNum >= player.GetComponent<Player>().totalD8s)
         {
 
         }
@@ -116,7 +116,7 @@ public class CanvasDice : MonoBehaviour
     //add one d12 to the selected action
     public void AddTwelve()
     {
-        if (twelveNum >= player.GetComponent(Player).totalD12s)
+        if (twelveNum >= player.GetComponent<Player>().totalD12s)
         {
 
         }
