@@ -18,12 +18,19 @@ public class Enemy : BaseCharacter
     {
         // Enemies only have d8s and d6s
         totalD12s = 0;
+        // Player starts with 1 of each die, so in a perfect full attack they will one shot one robot per round
+        health = 28;
+
+        // Decide the starting mood
+        currentMood = ChangeMood();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // On the enemies turn it will Fight based off of mood, then it will change mood
+        Fight();
+        currentMood = ChangeMood();
     }
 
     protected void Fight()
@@ -79,20 +86,13 @@ public class Enemy : BaseCharacter
                     }
 
                     //Then decide How many d8s it will roll
-                    if(totalD8s > 10)
+                    if(totalD8s < numOfDice)
                     {
-                        numOfD8 = 10 - numOfDice;
+                        numOfD8 = totalD8s;
                     }
                     else
                     {
-                        if((10 - numOfDice) >= totalD8s)
-                        {
-                            numOfD8 = totalD8s;
-                        }
-                        else
-                        {
-                            numOfD8 = 10 - numOfDice;
-                        }
+                        numOfD8 = numOfDice;
                     }
 
                     // Strike the target for the d6s and d8s
@@ -110,6 +110,112 @@ public class Enemy : BaseCharacter
                     break;
                 }
                 
+        }
+    }
+
+    private Type.Mood ChangeMood()
+    {
+        // The probablities change based on the quarter of health it has
+        int choice = Random.Range(1, 21);
+        // 75% or more health
+        if (health >= 21)
+        {
+            
+            if (choice < 19 && choice > 16)
+            {
+                // Block
+                return Type.Mood.Block;
+            }
+            else if(choice >= 19)
+            {
+                //Block Attack
+                return Type.Mood.BlockAttack;
+            }
+            else if(choice >= 9 && choice < 17)
+            {
+                // Medium Attack
+                return Type.Mood.MediumAttack;
+            }
+            else if(choice > 2 && choice <= 8)
+            {
+                // Multi Attack
+                return Type.Mood.MultiAttack;
+            }
+            else
+            {
+                // Big Attack
+                return Type.Mood.BigAttack;
+            }
+        }
+        else if(health >= 14 && health < 21)
+        {
+            if(choice >= 17)
+            {
+                //Block
+                return Type.Mood.Block;
+            }
+            else if (choice >= 13 && choice < 17)
+            {
+                return Type.Mood.BlockAttack;
+            }
+            else if (choice >= 7 && choice < 13)
+            {
+                return Type.Mood.MediumAttack;
+            }
+            else if(choice >= 3 && choice < 7)
+            {
+                return Type.Mood.MultiAttack;
+            }
+            else
+            {
+                return Type.Mood.BigAttack;
+            }
+        }
+        else if(health >= 7 && health < 14)
+        {
+            if(choice >= 16)
+            {
+                return Type.Mood.Block;
+            }
+            else if(choice >= 11 && choice < 16)
+            {
+                return Type.Mood.BlockAttack;
+            }
+            else if(choice >= 6 && choice < 11)
+            {
+                return Type.Mood.MediumAttack;
+            }
+            else if(choice >= 3 && choice < 6)
+            {
+                return Type.Mood.MultiAttack;
+            }
+            else
+            {
+                return Type.Mood.BigAttack;
+            }
+        }
+        else
+        {
+            if (choice >= 15)
+            {
+                return Type.Mood.Block;
+            }
+            else if(choice >= 9 && choice < 15)
+            {
+                return Type.Mood.BlockAttack;
+            }
+            else if(choice >= 5 && choice < 9)
+            {
+                return Type.Mood.MediumAttack;
+            }
+            else if(choice >= 3 && choice < 5)
+            {
+                return Type.Mood.MultiAttack;
+            }
+            else
+            {
+                return Type.Mood.BigAttack;
+            }
         }
     }
 
