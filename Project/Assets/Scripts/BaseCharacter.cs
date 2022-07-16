@@ -11,7 +11,7 @@ public class BaseCharacter : MonoBehaviour
     public int Health { get { return health; } }
     public int Block { get { return block; } }
     public int Attack { get { return attack; } }
-    public string Name { get { return name; } }
+    public string Name { get { return title; } }
 
     // Protected
     protected int health;
@@ -20,7 +20,7 @@ public class BaseCharacter : MonoBehaviour
     protected int totalD6s;
     protected int totalD8s;
     protected int totalD12s;
-    protected string name;
+    protected string title;
 
     // Start is called before the first frame update
     void Start()
