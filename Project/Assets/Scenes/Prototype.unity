@@ -602,13 +602,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1512117921}
+        m_TargetAssemblyTypeName: CanvasDice, Assembly-CSharp
+        m_MethodName: BlockSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -736,13 +736,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1512117921}
+        m_TargetAssemblyTypeName: CanvasDice, Assembly-CSharp
+        m_MethodName: AttackSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -904,13 +904,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1512117921}
+        m_TargetAssemblyTypeName: CanvasDice, Assembly-CSharp
+        m_MethodName: AddTwelve
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -972,7 +972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &333702274
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1364,13 +1364,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1512117921}
+        m_TargetAssemblyTypeName: CanvasDice, Assembly-CSharp
+        m_MethodName: AbilitySelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1525,6 +1525,15 @@ MonoBehaviour:
   cDefault: {fileID: 2093254860}
   cDice: {fileID: 1512117916}
   cLoot: {fileID: 1185163355}
+  sixTallyB: 0
+  eightTallyB: 0
+  twelveTallyB: 0
+  sixTallyAt: 0
+  eightTallyAt: 0
+  twelveTallyAt: 0
+  sixTallyAb: 0
+  eightTallyAb: 0
+  twelveTallyAb: 0
 --- !u!4 &744851660
 Transform:
   m_ObjectHideFlags: 0
@@ -1636,7 +1645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &832092766
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1790,13 +1799,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1512117921}
+        m_TargetAssemblyTypeName: CanvasDice, Assembly-CSharp
+        m_MethodName: AddEight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2112,7 +2121,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &971222910
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2418,6 +2427,49 @@ Transform:
   m_Father: {fileID: 1512117920}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1087008452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1087008454}
+  - component: {fileID: 1087008453}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1087008453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087008452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f71f5ceb99825434c97f8058d26833cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1087008454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087008452}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 766, y: 384.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1088496792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2694,10 +2746,14 @@ MonoBehaviour:
   lootTwo: {fileID: 2115876821}
   lootOneText: {fileID: 28639700}
   lootTwoText: {fileID: 627560140}
+  player: {fileID: 1087008452}
   dice:
   - {fileID: 21300000, guid: ec363a0f3df73e843a9163ecad9a2e80, type: 3}
   - {fileID: 21300000, guid: 2f3daf8a56e6d1d45a1696eb4107ccfd, type: 3}
   - {fileID: 21300000, guid: 6fcc7618cb0b6744ebb6fae7190cb720, type: 3}
+  sixChance: 0
+  eightChance: 0
+  twelveCount: 0
 --- !u!1 &1227893244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2715,7 +2771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1227893245
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2792,7 +2848,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1243316141
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3455,13 +3511,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1512117921}
+        m_TargetAssemblyTypeName: CanvasDice, Assembly-CSharp
+        m_MethodName: MinusEight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3592,6 +3648,7 @@ GameObject:
   - component: {fileID: 1512117919}
   - component: {fileID: 1512117918}
   - component: {fileID: 1512117917}
+  - component: {fileID: 1512117921}
   m_Layer: 5
   m_Name: Canvas_Dice
   m_TagString: Untagged
@@ -3687,6 +3744,41 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1512117921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512117916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 193d4c177c6ed4a4fb9f7cefe4e45668, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sixCount: {fileID: 335266878}
+  eightCount: {fileID: 1782167479}
+  twelveCount: {fileID: 129909024}
+  block: {fileID: 393765820}
+  attack: {fileID: 1874119398}
+  ability: {fileID: 1577692314}
+  tBlock: {fileID: 1308347280}
+  tAttack: {fileID: 1828878816}
+  tAbility: {fileID: 1088496792}
+  player: {fileID: 1087008452}
+  currentTally: {fileID: 0}
+  sixNum: 0
+  eightNum: 0
+  twelveNum: 0
+  sixTallyB: 0
+  eightTallyB: 0
+  twelveTallyB: 0
+  sixTallyAt: 0
+  eightTallyAt: 0
+  twelveTallyAt: 0
+  sixTallyAb: 0
+  eightTallyAb: 0
+  twelveTallyAb: 0
 --- !u!1 &1519549455
 GameObject:
   m_ObjectHideFlags: 0
@@ -3705,7 +3797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1519549456
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4074,7 +4166,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1656118030
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4453,13 +4545,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1512117921}
+        m_TargetAssemblyTypeName: CanvasDice, Assembly-CSharp
+        m_MethodName: MinusTwelve
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5018,13 +5110,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1512117921}
+        m_TargetAssemblyTypeName: CanvasDice, Assembly-CSharp
+        m_MethodName: AddSix
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5319,7 +5411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1931036256
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5384,13 +5476,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 2093254865}
+        m_TargetAssemblyTypeName: DefaultCanvas, Assembly-CSharp
+        m_MethodName: EndTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5596,13 +5688,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1512117921}
+        m_TargetAssemblyTypeName: CanvasDice, Assembly-CSharp
+        m_MethodName: MinusSix
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5812,6 +5904,7 @@ GameObject:
   - component: {fileID: 2093254863}
   - component: {fileID: 2093254862}
   - component: {fileID: 2093254861}
+  - component: {fileID: 2093254865}
   m_Layer: 5
   m_Name: Canvas_Default
   m_TagString: Untagged
@@ -5907,6 +6000,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2093254865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093254860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff51bc9d67272d84cb887f70a7292d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aDice: {fileID: 1519549455}
+  eTurn: {fileID: 1931036255}
+  dSix: {fileID: 1656118029}
+  dSixText: {fileID: 1386532540}
+  dEight: {fileID: 1227893244}
+  dEightText: {fileID: 1734784214}
+  dTwelve: {fileID: 971222909}
+  dTwelveText: {fileID: 1669040140}
+  block: {fileID: 333702273}
+  blockText: {fileID: 1037531363}
+  attack: {fileID: 832092765}
+  attackText: {fileID: 1340721865}
+  ability: {fileID: 1243316140}
+  abilityText: {fileID: 97693741}
+  sixRoll: 0
+  eightRoll: 0
+  twelveRoll: 0
+  blockCount: 0
+  attackCount: 0
+  abilityCount: 0
+  manager: {fileID: 744851658}
+  player: {fileID: 1087008452}
 --- !u!1 &2115876821
 GameObject:
   m_ObjectHideFlags: 0

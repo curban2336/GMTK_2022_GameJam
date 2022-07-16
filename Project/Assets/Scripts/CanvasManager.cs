@@ -21,6 +21,13 @@ public class CanvasManager : MonoBehaviour
     public int eightTallyAb = 0;
     public int twelveTallyAb = 0;
 
+    void Awake()
+    {
+        cDefault.SetActive(true);
+        cDice.SetActive(true);
+        cLoot.SetActive(true);
+    }
+    
     // Start is called before the first frame update
     void Start()
     {

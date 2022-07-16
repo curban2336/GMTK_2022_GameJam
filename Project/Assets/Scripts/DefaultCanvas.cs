@@ -24,9 +24,9 @@ public class DefaultCanvas : MonoBehaviour
     [SerializeField] GameObject abilityText;
 
     //bools to help handle rotations
-    private bool sixRoll = false;
-    private bool eightRoll = false;
-    private bool twelveRoll = false;
+    [SerializeField] bool sixRoll = false;
+    [SerializeField] bool eightRoll = false;
+    [SerializeField] bool twelveRoll = false;
 
     //counts for the total roll results per action
     public int blockCount = 0;

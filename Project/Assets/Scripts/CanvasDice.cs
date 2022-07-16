@@ -46,19 +46,19 @@ public class CanvasDice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sixNum = player.GetComponent<Player>().totalD6s;
-        eightNum = player.GetComponent<Player>().totalD8s;
-        twelveNum = player.GetComponent<Player>().totalD12s;
-        sixCount.GetComponent<Text>().text = ($"{player.GetComponent<Player>().totalD6s}");
-        eightCount.GetComponent<Text>().text = ($"{player.GetComponent<Player>().totalD8s}");
-        twelveCount.GetComponent<Text>().text = ($"{player.GetComponent<Player>().totalD12s}");
+        sixNum = player.GetComponent<Player>().TotalD6s;
+        eightNum = player.GetComponent<Player>().TotalD8s;
+        twelveNum = player.GetComponent<Player>().TotalD12s;
+        sixCount.GetComponent<Text>().text = ($"{player.GetComponent<Player>().TotalD6s}");
+        eightCount.GetComponent<Text>().text = ($"{player.GetComponent<Player>().TotalD8s}");
+        twelveCount.GetComponent<Text>().text = ($"{player.GetComponent<Player>().TotalD12s}");
         currentTally = tBlock;
     }
 
     //add one d12 to the selected action
     public void AddSix()
     {
-        if(sixNum >= player.GetComponent<Player>().totalD6s)
+        if(sixNum >= player.GetComponent<Player>().TotalD6s)
         {
 
         }
@@ -87,7 +87,7 @@ public class CanvasDice : MonoBehaviour
     //add one d12 to the selected action
     public void AddEight()
     {
-        if(eightNum >= player.GetComponent<Player>().totalD8s)
+        if(eightNum >= player.GetComponent<Player>().TotalD8s)
         {
 
         }
@@ -116,7 +116,7 @@ public class CanvasDice : MonoBehaviour
     //add one d12 to the selected action
     public void AddTwelve()
     {
-        if (twelveNum >= player.GetComponent<Player>().totalD12s)
+        if (twelveNum >= player.GetComponent<Player>().TotalD12s)
         {
 
         }
