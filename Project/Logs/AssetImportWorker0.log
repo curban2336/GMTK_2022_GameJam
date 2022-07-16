@@ -181,3 +181,52 @@ Received Import Request.
 Start importing Assets/Scripts/PlayerPreference.cs using Guid(a31427d39520e8343ae6ee54d3891be2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '438f2435c8390a412dad7b1fb94970ca') in 0.003097 seconds 
   Import took 0.004762 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 439.598891 seconds.
+  path: Assets/Scripts/BaseCharacter.cs
+  artifactKey: Guid(830400e2898ef16489b55a613868754f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/BaseCharacter.cs using Guid(830400e2898ef16489b55a613868754f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b79fde63ec29c90923f43f0f3fc2bb3') in 0.001976 seconds 
+  Import took 0.004099 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002409 seconds.
+  path: Assets/Scripts/BaseCharacter.cs
+  artifactKey: Guid(830400e2898ef16489b55a613868754f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/BaseCharacter.cs using Guid(830400e2898ef16489b55a613868754f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b79fde63ec29c90923f43f0f3fc2bb3') in 0.001810 seconds 
+  Import took 0.003800 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.571861 seconds.
+  path: Assets/Scripts/Enemy.cs
+  artifactKey: Guid(68182399593d7e04e8e5bbd31125ccd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemy.cs using Guid(68182399593d7e04e8e5bbd31125ccd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a5f83acab58738ad66266190b9c219a') in 0.001856 seconds 
+  Import took 0.003987 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000442 seconds.
+  path: Assets/Scripts/Enemy.cs
+  artifactKey: Guid(68182399593d7e04e8e5bbd31125ccd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemy.cs using Guid(68182399593d7e04e8e5bbd31125ccd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a5f83acab58738ad66266190b9c219a') in 0.001706 seconds 
+  Import took 0.003504 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 166.888482 seconds.
+  path: Assets/Scripts/Type.cs
+  artifactKey: Guid(710455149b2eaea4699c3c1753eb7066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Type.cs using Guid(710455149b2eaea4699c3c1753eb7066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0af80b03afe4edce1f99b47bcbc0c85e') in 0.002355 seconds 
+  Import took 0.004346 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000995 seconds.
+  path: Assets/Scripts/Type.cs
+  artifactKey: Guid(710455149b2eaea4699c3c1753eb7066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Type.cs using Guid(710455149b2eaea4699c3c1753eb7066) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0af80b03afe4edce1f99b47bcbc0c85e') in 0.001839 seconds 
+  Import took 0.003772 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
