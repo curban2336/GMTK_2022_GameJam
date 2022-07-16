@@ -19,7 +19,7 @@ public class BaseCharacter : MonoBehaviour
     protected int attack;
     protected int totalD6s;
     protected int totalD8s;
-    protected int totalD10s;
+    protected int totalD12s;
     protected string name;
 
     // Start is called before the first frame update
@@ -34,19 +34,20 @@ public class BaseCharacter : MonoBehaviour
         
     }
     /// <summary>
-    /// Used to attack and damage the targeted character
+    /// Used to attack target character
     /// </summary>
-    /// <param name="target"> The character being attacked</param>
-    protected void Strike(BaseCharacter target)
+    /// <param name="target"> The character being hit</param>
+    /// <param name="damage"> Damage applied, Players apply attack, enemies vary on mood</param>
+    protected void Strike(BaseCharacter target, int damage)
     {
-        target.TakeDamage(attack);
+        target.TakeDamage(damage);
     }
 
     /// <summary>
     /// Reduces health by the damage, checks if the character should die
     /// </summary>
     /// <param name="damage"> The ammount of damage taken</param>
-    private void TakeDamage(int damage)
+    protected void TakeDamage(int damage)
     {
         if(block > 0)
         {
@@ -74,11 +75,38 @@ public class BaseCharacter : MonoBehaviour
         }
     }
 
+    protected void CleanUp()
+    {
+        // At the end of the round do some clean up to make sure everything is good
+        // Reset attack value
+        attack = 0;
+
+        // Block stays between rounds
+        // Check health
+        if(health <= 0)
+        {
+            Death();
+        }
+    }
+
     protected void Death()
     {
         if(health <= 0)
         {
             // Destroys the object?
         }
+    }
+
+    public int RollD6s()
+    {
+        return Random.Range(1, 7);
+    }
+    public int RollD8s()
+    {
+        return Random.Range(1, 9);
+    }
+    public int RollD12s()
+    {
+        return Random.Range(1, 13);
     }
 }
