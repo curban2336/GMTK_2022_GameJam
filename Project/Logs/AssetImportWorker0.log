@@ -87,3 +87,4 @@ Received Import Request.
 Start importing Assets/Scripts/CanvasDice.cs using Guid(193d4c177c6ed4a4fb9f7cefe4e45668) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7911d49be0c42e8fd5ca8516a473d665') in 0.014447 seconds 
   Import took 0.016325 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
