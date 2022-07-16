@@ -9,28 +9,42 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] GameObject cDefault;
     [SerializeField] GameObject cDice;
     [SerializeField] GameObject cLoot;
-    //action blocks for roll results
-    [SerializeField] GameObject block;
-    [SerializeField] GameObject attack;
-    [SerializeField] GameObject ability;
-    //text for action roll results
-    [SerializeField] GameObject tBlock;
-    [SerializeField] GameObject tAttack;
-    [SerializeField] GameObject tAbility;
-    //
-    [SerializeField]
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        cDefault.SetActive(true);
+        cDice.SetActive(false);
+        cLoot.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    //Shift from default canvas to dice assignment.
+    public void DefaultToDice()
     {
-        
+        cDefault.SetActive(false);
+        cDice.SetActive(true);
+    }
+
+    //Shift from dice assignment back to default.
+    public void DiceToDefault ()
+    {
+        cDefault.SetActive(true);
+        cDice.SetActive(false);
+    }
+
+    //Shift from default to loot assignment.
+    public void DefaultToLoot()
+    {
+        cDefault.SetActive(false);
+        cLoot.SetActive(true);
+    }
+
+    //Shift from loot assignment back to default.
+    public void LootToDefault()
+    {
+        cDefault.SetActive(true);
+        cLoot.SetActive(false);
     }
 }

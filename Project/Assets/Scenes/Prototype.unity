@@ -1471,15 +1471,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b4e8cffc2f67a44a840153d5bc768b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cDefault: {fileID: 0}
-  cDice: {fileID: 0}
-  cLoot: {fileID: 0}
-  block: {fileID: 0}
-  attack: {fileID: 0}
-  ability: {fileID: 0}
-  tBlock: {fileID: 0}
-  tAttack: {fileID: 0}
-  tAbility: {fileID: 0}
+  cDefault: {fileID: 2093254860}
+  cDice: {fileID: 1512117916}
+  cLoot: {fileID: 1185163355}
 --- !u!4 &744851660
 Transform:
   m_ObjectHideFlags: 0
@@ -2196,7 +2190,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1027099661}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 744851659}
+        m_TargetAssemblyTypeName: CanvasManager, Assembly-CSharp
+        m_MethodName: DiceToDefault
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1027099661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2436,13 +2442,14 @@ GameObject:
   - component: {fileID: 1185163358}
   - component: {fileID: 1185163357}
   - component: {fileID: 1185163356}
+  - component: {fileID: 1185163360}
   m_Layer: 5
   m_Name: Canvas_Loot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1185163356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2529,6 +2536,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1185163360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185163355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a6d57aebf22b94d864ae5ff19e49ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootOne: {fileID: 1748487629}
+  lootTwo: {fileID: 2115876821}
+  lootOneText: {fileID: 28639700}
+  lootTwoText: {fileID: 627560140}
+  dice:
+  - {fileID: 21300000, guid: ec363a0f3df73e843a9163ecad9a2e80, type: 3}
+  - {fileID: 21300000, guid: 2f3daf8a56e6d1d45a1696eb4107ccfd, type: 3}
+  - {fileID: 21300000, guid: 6fcc7618cb0b6744ebb6fae7190cb720, type: 3}
 --- !u!1 &1227893244
 GameObject:
   m_ObjectHideFlags: 0
@@ -3509,7 +3536,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1519549458}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 744851659}
+        m_TargetAssemblyTypeName: CanvasManager, Assembly-CSharp
+        m_MethodName: DefaultToDice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1519549458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4301,7 +4340,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1748487632}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 744851659}
+        m_TargetAssemblyTypeName: CanvasManager, Assembly-CSharp
+        m_MethodName: LootToDefault
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1748487632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5401,13 +5452,14 @@ GameObject:
   - component: {fileID: 2093254863}
   - component: {fileID: 2093254862}
   - component: {fileID: 2093254861}
+  - component: {fileID: 2093254865}
   m_Layer: 5
   m_Name: Canvas_Default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2093254861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5496,6 +5548,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2093254865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093254860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff51bc9d67272d84cb887f70a7292d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2115876821
 GameObject:
   m_ObjectHideFlags: 0
@@ -5578,7 +5642,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2115876824}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 744851659}
+        m_TargetAssemblyTypeName: CanvasManager, Assembly-CSharp
+        m_MethodName: LootToDefault
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2115876824
 MonoBehaviour:
   m_ObjectHideFlags: 0
