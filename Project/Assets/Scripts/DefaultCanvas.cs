@@ -39,6 +39,11 @@ public class DefaultCanvas : MonoBehaviour
     //reference to canvas manager
     [SerializeField] GameObject player;
 
+    //halos
+    [SerializeField] Behaviour haloB;
+    [SerializeField] Behaviour haloAt;
+    [SerializeField] Behaviour haloAb;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -93,49 +98,58 @@ public class DefaultCanvas : MonoBehaviour
 
         int rollNum = 0;
 
-        //block.GetComponent<Halo>().enabled = true;
+        //haloB.enabled = true;
+        Debug.Log("halo on");
 
         sixCount = manager.GetComponent<CanvasManager>().sixTallyB;
         eightCount = manager.GetComponent<CanvasManager>().eightTallyB;
         twelveCount = manager.GetComponent<CanvasManager>().twelveTallyB;
 
-        yield return new WaitForSeconds(0.2f);
+        Debug.Log("Problem test");
+        yield return new WaitForSecondsRealtime(1);
+        Debug.Log("Problem test");
 
         for(int i = 0; i < sixCount; i++)
         {
             rollNum = player.GetComponent<Player>().RollD6s();
             blockCount += rollNum;
             sixRoll = true;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSecondsRealtime(1);
             sixRoll = false;
             dSixText.GetComponent<Text>().text = $"{rollNum}";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSecondsRealtime(0);
             blockText.GetComponent<Text>().text = $"Block: {blockCount}";
         }
+        Debug.Log("d6s");
 
         for (int i = 0; i < eightCount; i++)
         {
             rollNum = player.GetComponent<Player>().RollD8s();
             blockCount += rollNum;
             eightRoll = true;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSecondsRealtime(1);
             eightRoll = false;
+            Debug.Log("Stop Rolling");
             dEightText.GetComponent<Text>().text = $"{rollNum}";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSecondsRealtime(0);
             blockText.GetComponent<Text>().text = $"Block: {blockCount}";
         }
+        Debug.Log("d8s");
 
         for (int i = 0; i < twelveCount; i++)
         {
             rollNum = player.GetComponent<Player>().RollD12s();
             blockCount += rollNum;
             twelveRoll = true;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSecondsRealtime(1);
             twelveRoll = false;
             dTwelveText.GetComponent<Text>().text = $"{rollNum}";
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSecondsRealtime(0);
             blockText.GetComponent<Text>().text = $"Block: {blockCount}";
         }
+        Debug.Log("d12s");
+
+        //haloB.enabled = false;
     }
 
     // Update is called once per frame
@@ -143,7 +157,9 @@ public class DefaultCanvas : MonoBehaviour
     {
         while (sixRoll)
         {
+            Debug.Log("Start roll");
             dSix.transform.rotation = Quaternion.Slerp(dSix.transform.rotation, new Quaternion(0, 0, 360, 0), 0.2f);
+            Debug.Log("Rolling!!!");
             if(dSix.transform.rotation.z >= 360)
             {
                 dSix.transform.rotation = new Quaternion(0, 0, 0, 0);

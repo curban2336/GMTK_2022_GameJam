@@ -6034,6 +6034,9 @@ MonoBehaviour:
   abilityCount: 0
   manager: {fileID: 744851658}
   player: {fileID: 1087008452}
+  haloB: {fileID: 333702275}
+  haloAt: {fileID: 832092767}
+  haloAb: {fileID: 1243316142}
 --- !u!1 &2115876821
 GameObject:
   m_ObjectHideFlags: 0
