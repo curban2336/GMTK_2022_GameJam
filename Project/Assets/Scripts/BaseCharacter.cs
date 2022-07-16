@@ -12,6 +12,10 @@ public class BaseCharacter : MonoBehaviour
     public int Block { get { return block; } }
     public int Attack { get { return attack; } }
     public string Name { get { return title; } }
+    public int TotalD6s { get { return totalD6s; } }
+    public int TotalD8s { get { return totalD8s; } }
+    public int TotalD12s { get { return totalD12s; } }
+
 
     // Protected
     protected int health;
