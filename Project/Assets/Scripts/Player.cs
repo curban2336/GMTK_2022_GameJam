@@ -9,8 +9,11 @@ public class Player : BaseCharacter
     private int defense;
     private int healing;
     public List<BaseCharacter> enemyList;
-    private BaseCharacter target;
+
     public PlayerSounds sounds;
+
+    public BaseCharacter target;
+    public EnemyManager manager;
 
     // Properties
     public int Damage { set { damage = value; } }
@@ -45,7 +48,7 @@ public class Player : BaseCharacter
         HeadButt(target, damage);
         Special(healing);
 
-
+        manager.eTurn = true;
     }
     private void HeadButt(BaseCharacter target, int damage)
     {

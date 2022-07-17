@@ -10,6 +10,8 @@ public class CanvasManager : MonoBehaviour
     [SerializeField] GameObject cDice;
     [SerializeField] GameObject cLoot;
 
+    [SerializeField] Player player;
+
     //received information from cDice
     public int sixTallyB = 0;
     public int eightTallyB = 0;
@@ -59,6 +61,10 @@ public class CanvasManager : MonoBehaviour
         cDice.GetComponent<CanvasDice>().sixTallyAb = 0;
         cDice.GetComponent<CanvasDice>().eightTallyAb = 0;
         cDice.GetComponent<CanvasDice>().twelveTallyAb = 0;
+        cDice.GetComponent<CanvasDice>().sixNum = player.GetComponent<Player>().TotalD6s;
+        cDice.GetComponent<CanvasDice>().eightNum = player.GetComponent<Player>().TotalD8s;
+        cDice.GetComponent<CanvasDice>().twelveNum = player.GetComponent<Player>().TotalD12s;
+        cDice.GetComponent<CanvasDice>().Reset();
     }
 
     //Shift from dice assignment back to default.

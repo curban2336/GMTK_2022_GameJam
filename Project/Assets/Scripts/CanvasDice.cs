@@ -26,9 +26,9 @@ public class CanvasDice : MonoBehaviour
     [SerializeField] GameObject currentTally;
 
     //current number of dice left 
-    [SerializeField] int sixNum;
-    [SerializeField] int eightNum;
-    [SerializeField] int twelveNum;
+    public int sixNum;
+    public int eightNum;
+    public int twelveNum;
 
     //current number of dice in an action 
     public int sixTallyB = 0;
@@ -53,6 +53,17 @@ public class CanvasDice : MonoBehaviour
         eightCount.GetComponent<Text>().text = ($"{player.GetComponent<Player>().TotalD8s}");
         twelveCount.GetComponent<Text>().text = ($"{player.GetComponent<Player>().TotalD12s}");
         currentTally = tBlock;
+    }
+
+    public void Reset()
+    {
+        sixCount.GetComponent<Text>().text = ($"{player.GetComponent<Player>().TotalD6s}");
+        eightCount.GetComponent<Text>().text = ($"{player.GetComponent<Player>().TotalD8s}");
+        twelveCount.GetComponent<Text>().text = ($"{player.GetComponent<Player>().TotalD12s}");
+        tBlock.GetComponent<Text>().text = ($"D6: {sixTallyB} D8: {eightTallyB} D12: {twelveTallyB}");
+        tAttack.GetComponent<Text>().text = ($"D6: {sixTallyAt} D8: {eightTallyAt} D12: {twelveTallyAt}");
+        tAbility.GetComponent<Text>().text = ($"D6: {sixTallyAb} D8: {eightTallyAb} D12: {twelveTallyAb}");
+
     }
 
     //add one d12 to the selected action

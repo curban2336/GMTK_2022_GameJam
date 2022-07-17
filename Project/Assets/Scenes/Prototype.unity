@@ -1183,7 +1183,10 @@ MonoBehaviour:
   pos2: {fileID: 1087205752}
   pos3: {fileID: 1735523548}
   walkUpOne: 0
+  eTurn: 0
   player: {fileID: 1109085330}
+  canvas: {fileID: 2093254865}
+  victory: {fileID: 626614673}
 --- !u!4 &343518607
 Transform:
   m_ObjectHideFlags: 0
@@ -1526,6 +1529,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68182399593d7e04e8e5bbd31125ccd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &626614673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 626614674}
+  - component: {fileID: 626614676}
+  - component: {fileID: 626614675}
+  m_Layer: 5
+  m_Name: Victory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &626614674
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626614673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2093254864}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &626614675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626614673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 5
+    m_MaxSize: 50
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Victory!
+--- !u!222 &626614676
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626614673}
+  m_CullTransparentMesh: 1
 --- !u!1 &627560140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,6 +1785,7 @@ MonoBehaviour:
   cDefault: {fileID: 2093254860}
   cDice: {fileID: 1512117916}
   cLoot: {fileID: 1185163355}
+  player: {fileID: 1109085330}
   sixTallyB: 0
   eightTallyB: 0
   twelveTallyB: 0
@@ -1866,7 +1949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4107766102623814456, guid: 6cc7a5213dcf5e64bb085a92a37647e1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.5
+      value: 204
       objectReference: {fileID: 0}
     - target: {fileID: 4107766102623814456, guid: 6cc7a5213dcf5e64bb085a92a37647e1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1886,7 +1969,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4107766102623814456, guid: 6cc7a5213dcf5e64bb085a92a37647e1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 560.8
+      value: 416
       objectReference: {fileID: 0}
     - target: {fileID: 4107766102623814456, guid: 6cc7a5213dcf5e64bb085a92a37647e1, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1910,7 +1993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4107766102623814462, guid: 6cc7a5213dcf5e64bb085a92a37647e1, type: 3}
       propertyPath: m_Value
-      value: 26.8
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 4107766102623814462, guid: 6cc7a5213dcf5e64bb085a92a37647e1, type: 3}
       propertyPath: m_MaxValue
@@ -2949,8 +3032,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71f5ceb99825434c97f8058d26833cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dead: 0
   self: {fileID: 1109085329}
   enemyList: []
+  manager: {fileID: 343518606}
 --- !u!1 &1163380251
 GameObject:
   m_ObjectHideFlags: 0
@@ -4173,7 +4258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4107766102623814456, guid: 6cc7a5213dcf5e64bb085a92a37647e1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -34
       objectReference: {fileID: 0}
     - target: {fileID: 4107766102623814456, guid: 6cc7a5213dcf5e64bb085a92a37647e1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4193,7 +4278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4107766102623814456, guid: 6cc7a5213dcf5e64bb085a92a37647e1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 567.4
       objectReference: {fileID: 0}
     - target: {fileID: 4107766102623814456, guid: 6cc7a5213dcf5e64bb085a92a37647e1, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6980,6 +7065,7 @@ RectTransform:
   - {fileID: 333702274}
   - {fileID: 832092766}
   - {fileID: 1243316141}
+  - {fileID: 626614674}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7017,6 +7103,7 @@ MonoBehaviour:
   sixRoll: 0
   eightRoll: 0
   twelveRoll: 0
+  victory: 0
   blockCount: 0
   attackCount: 0
   abilityCount: 0
@@ -7417,6 +7504,10 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 1109085329}
+    - target: {fileID: 4107766102623814463, guid: 6cc7a5213dcf5e64bb085a92a37647e1, type: 3}
+      propertyPath: designator
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cc7a5213dcf5e64bb085a92a37647e1, type: 3}
 --- !u!1 &7673487250410579308 stripped
