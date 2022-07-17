@@ -8,8 +8,8 @@ public class Player : BaseCharacter
     private int damage;
     private int defense;
     private int healing;
-    public List<BaseCharacter> enemyList;
-    private BaseCharacter target;
+    //public List<BaseCharacter> enemyList;
+    [SerializeField] private BaseCharacter target;
 
     // Properties
     public int Damage { set { damage = value; } }
@@ -72,7 +72,7 @@ public class Player : BaseCharacter
     protected override void TakeDamage(int damage)
     {
         // Call the Animation
-        self.GetComponent<Animator>().Play("Armature|Pachycephalasaurus_IdleA0101", 0, 0f);
+        self.GetComponent<Animator>().Play("Armature|Pachycephalasaurus_IdleA 0 1 0 1", 0, 0f);
         base.TakeDamage(damage);
     }
 
