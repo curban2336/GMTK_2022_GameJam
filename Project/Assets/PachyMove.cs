@@ -25,6 +25,11 @@ public class PachyMove : StateMachineBehaviour
         
         Vector3 newPos = Vector3.MoveTowards(startPosition.position, target, speed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
+
+        if(Vector3.Distance(target, rb.position) == 0)
+        {
+            animator.SetTrigger("InPos");
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
