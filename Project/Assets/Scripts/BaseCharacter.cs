@@ -12,9 +12,9 @@ public class BaseCharacter : MonoBehaviour
     public int Block { get { return block; } }
     public int Attack { get { return attack; } }
     public string Name { get { return title; } }
-    public int TotalD6s { get { return totalD6s; } }
-    public int TotalD8s { get { return totalD8s; } }
-    public int TotalD12s { get { return totalD12s; } }
+    public int TotalD6s { get { return totalD6s; } set { totalD6s += value; } }
+    public int TotalD8s { get { return totalD8s; } set { totalD8s += value; } }
+    public int TotalD12s { get { return totalD12s; } set { totalD12s += value; } }
 
 
     // Protected
@@ -25,6 +25,10 @@ public class BaseCharacter : MonoBehaviour
     protected int totalD8s;
     protected int totalD12s;
     protected string title;
+
+
+    [SerializeField]
+    protected GameObject self;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +55,7 @@ public class BaseCharacter : MonoBehaviour
     /// Reduces health by the damage, checks if the character should die
     /// </summary>
     /// <param name="damage"> The ammount of damage taken</param>
-    protected void TakeDamage(int damage)
+    virtual protected void TakeDamage(int damage)
     {
         if(block > 0)
         {
@@ -93,7 +97,7 @@ public class BaseCharacter : MonoBehaviour
         }
     }
 
-    protected void Death()
+    virtual protected void Death()
     {
         if(health <= 0)
         {

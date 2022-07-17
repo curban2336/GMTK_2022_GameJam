@@ -8,7 +8,7 @@ public class Enemy : BaseCharacter
     // Fields
     protected Type.Mood currentMood;
     protected int blockRoll;
-    protected BaseCharacter player;
+    protected Player player;
 
     // Properties
     public Type.Mood CurrentMood { get { return currentMood; } }
@@ -16,11 +16,15 @@ public class Enemy : BaseCharacter
     // Start is called before the first frame update
     void Start()
     {
+        // Initializing fields
+        totalD6s = 3;
+        totalD8s = 2;
+
         // Enemies only have d8s and d6s
         totalD12s = 0;
         // Player starts with 1 of each die, so in a perfect full attack they will one shot one robot per round
         health = 28;
-
+        title = "Gigabyte";
         // Decide the starting mood
         currentMood = ChangeMood();
     }
@@ -28,8 +32,11 @@ public class Enemy : BaseCharacter
     // Update is called once per frame
     void Update()
     {
+        // Start of the turn it will clear it's attack
+        attack = 0;
         // On the enemies turn it will Fight based off of mood, then it will change mood
         Fight();
+        Animations();
         currentMood = ChangeMood();
     }
 
@@ -50,20 +57,22 @@ public class Enemy : BaseCharacter
                     // Roll all Dice and add them together
                     attack = AllD6s();
                     attack = attack + AllD8s();
+                    Strike(player, attack);
                     break;
                 }
             case Type.Mood.Block:
                 {
                     // Roll All Dice and apply them to block
-                    block = block + AllD8s();
-                    block = block + AllD6s();
+                    block += AllD8s();
+                    block += AllD6s();
                     break;
                 }
             case Type.Mood.BlockAttack:
                 {
                     // Roll D6s for damage & d8s for block
                     attack = AllD6s();
-                    block = block + AllD8s();
+                    block += AllD8s();
+                    Strike(player, attack);
                     break;
                 }
             case Type.Mood.MultiAttack:
@@ -240,5 +249,70 @@ public class Enemy : BaseCharacter
             value = value + RollD8s();
         }
         return value;
+    }
+
+    protected void Animations()
+    {
+        // Checks what mood the Enemy is in and then calls animations based on the mood
+        switch (currentMood)
+        {
+            case Type.Mood.BigAttack:
+            {
+                    BigAttackAnimation();
+                break;
+            }
+            case Type.Mood.Block:
+            {
+                    BlockAnimation();
+                break;
+            }
+            case Type.Mood.MediumAttack:
+            {
+                    MediumAttackAnimation();
+                break;
+            }
+            case Type.Mood.BlockAttack:
+            {
+                    BlockAttackAnimation();
+                break;
+            }
+            case Type.Mood.MultiAttack:
+            {
+                    MultiAttackAnimation();
+                break;
+            }
+        }
+    }
+    protected void BlockAnimation()
+    {
+        // Call the Animation for Block
+        self.GetComponent<Animator>().Play("Idle_Ducking_AR", 0, 0f);
+    }
+    protected void BlockAttackAnimation()
+    {
+        // Call the Animation (probaby Idle Shoot)
+        self.GetComponent<Animator>().Play("Idle_Ducking_AR", 0, 0f);
+        self.GetComponent<Animator>().Play("Shoot_SingleShot_AR", 0, 0f);
+    }
+    protected void MediumAttackAnimation()
+    {
+        // Call The Animation
+        self.GetComponent<Animator>().Play("Shoot_SingleShot_AR", 0, 0f);
+    }
+    protected void BigAttackAnimation()
+    {
+        self.GetComponent<Animator>().Play("Shoot_BurstShot_AR", 0, 0f);
+    }
+    protected void MultiAttackAnimation()
+    {
+        self.GetComponent<Animator>().Play("Shoot_Autoshot_AR", 0, 0f);
+    }
+
+    protected override void Death()
+    {
+        // Call the Death Animation
+        self.GetComponent<Animator>().Play("Die", 0, 0f);
+        base.Death();
+        
     }
 }
