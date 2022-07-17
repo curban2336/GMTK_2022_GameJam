@@ -58,7 +58,7 @@ public class CanvasDice : MonoBehaviour
     //add one d12 to the selected action
     public void AddSix()
     {
-        if(sixNum >= player.GetComponent<Player>().TotalD6s)
+        if(sixNum <= 0)
         {
 
         }
@@ -87,7 +87,7 @@ public class CanvasDice : MonoBehaviour
     //add one d12 to the selected action
     public void AddEight()
     {
-        if(eightNum >= player.GetComponent<Player>().TotalD8s)
+        if(eightNum <= 0)
         {
 
         }
@@ -116,7 +116,7 @@ public class CanvasDice : MonoBehaviour
     //add one d12 to the selected action
     public void AddTwelve()
     {
-        if (twelveNum >= player.GetComponent<Player>().TotalD12s)
+        if (twelveNum <= 0)
         {
 
         }
@@ -145,7 +145,7 @@ public class CanvasDice : MonoBehaviour
     //remove one d6 to the selected action
     public void MinusSix()
     {
-        if (sixNum <= 0)
+        if (sixNum >= player.GetComponent<Player>().TotalD6s)
         {
 
         }
@@ -174,7 +174,7 @@ public class CanvasDice : MonoBehaviour
     //remove one d8 to the selected action
     public void MinusEight()
     {
-        if (eightNum <= 0)
+        if (eightNum >= player.GetComponent<Player>().TotalD8s)
         {
 
         }
@@ -203,7 +203,7 @@ public class CanvasDice : MonoBehaviour
     //remove one d12 to the selected action
     public void MinusTwelve()
     {
-        if (twelveNum <= 0)
+        if (twelveNum >= player.GetComponent<Player>().TotalD12s)
         {
 
         }

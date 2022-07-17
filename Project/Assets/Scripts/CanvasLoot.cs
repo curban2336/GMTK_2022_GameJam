@@ -105,15 +105,15 @@ public class CanvasLoot : MonoBehaviour
     {
         if(lootOne.GetComponent<Image>().sprite = dice[0])
         {
-            //player.GetComponent<Player>().TotalD6s += num1;
+            player.GetComponent<Player>().TotalD6s += num1;
         }
         else if (lootOne.GetComponent<Image>().sprite = dice[1])
         {
-            //player.GetComponent<Player>().TotalD8s += num1;
+            player.GetComponent<Player>().TotalD8s += num1;
         }
         else if (lootOne.GetComponent<Image>().sprite = dice[2])
         {
-            //player.GetComponent<Player>().TotalD12s += num1;
+            player.GetComponent<Player>().TotalD12s += num1;
         }
     }
 
@@ -122,15 +122,15 @@ public class CanvasLoot : MonoBehaviour
     {
         if (lootTwo.GetComponent<Image>().sprite = dice[0])
         {
-            //player.GetComponent<Player>().TotalD6s += num2;
+            player.GetComponent<Player>().TotalD6s += num2;
         }
         else if (lootTwo.GetComponent<Image>().sprite = dice[1])
         {
-            //player.GetComponent<Player>().TotalD8s += num2;
+            player.GetComponent<Player>().TotalD8s += num2;
         }
         else if (lootTwo.GetComponent<Image>().sprite = dice[2])
         {
-            //player.GetComponent<Player>().TotalD12s += num2;
+            player.GetComponent<Player>().TotalD12s += num2;
         }
     }
 
