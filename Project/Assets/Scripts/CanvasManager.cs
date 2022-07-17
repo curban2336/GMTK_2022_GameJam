@@ -82,6 +82,8 @@ public class CanvasManager : MonoBehaviour
     {
         cDefault.SetActive(false);
         cLoot.SetActive(true);
+
+        cLoot.GetComponent<CanvasLoot>().LootGenerator();
     }
 
     //Shift from loot assignment back to default.

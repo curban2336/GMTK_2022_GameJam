@@ -174,18 +174,40 @@ public class DefaultCanvas : MonoBehaviour
 
         for (int i = 0; i <= sixCount - 1; i++)
         {
-            yield return StartCoroutine(Roll6At(rollNum));
+            yield return StartCoroutine(Roll6Ab(rollNum));
         }
 
         for (int i = 0; i <= eightCount - 1; i++)
         {
-            yield return StartCoroutine(Roll8At(rollNum));
+            yield return StartCoroutine(Roll8Ab(rollNum));
         }
 
         for (int i = 0; i <= twelveCount - 1; i++)
         {
-            yield return StartCoroutine(Roll12At(rollNum));
+            yield return StartCoroutine(Roll12Ab(rollNum));
         }
+
+        yield return new WaitForSeconds(1);
+
+        player.GetComponent<Player>().Damage = attackCount;
+        player.GetComponent<Player>().Blocking = blockCount;
+        player.GetComponent<Player>().Healing = abilityCount;
+
+        dSix.SetActive(false);
+        dSixText.SetActive(false);
+        dEight.SetActive(false);
+        dEightText.SetActive(false);
+        dTwelve.SetActive(false);
+        dTwelveText.SetActive(false);
+        block.SetActive(false);
+        blockText.SetActive(false);
+        attack.SetActive(false);
+        attackText.SetActive(false);
+        ability.SetActive(false);
+        abilityText.SetActive(false);
+
+        aDice.SetActive(true);
+        eTurn.SetActive(true);
     }
 
     private IEnumerator Roll6b(int rollNum)
@@ -261,7 +283,7 @@ public class DefaultCanvas : MonoBehaviour
         dSix.GetComponent<Animator>().Play("Rotate", 0, 0f);
         yield return new WaitForSeconds(1);
         dSixText.GetComponent<Text>().text = $"{rollNum}";
-        abilityText.GetComponent<Text>().text = $"Heal: {attackCount}";
+        abilityText.GetComponent<Text>().text = $"Heal: {abilityCount}";
         yield return new WaitForSeconds(0.5f);
     }
 
