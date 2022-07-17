@@ -8,7 +8,7 @@ public class Enemy : BaseCharacter
     // Fields
     protected Type.Mood currentMood;
     protected int blockRoll;
-    protected Player player;
+    [SerializeField] protected BaseCharacter player;
 
     // Properties
     public Type.Mood CurrentMood { get { return currentMood; } }
