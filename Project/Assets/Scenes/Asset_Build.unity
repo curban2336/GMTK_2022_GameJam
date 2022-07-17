@@ -593,7 +593,7 @@ PrefabInstance:
     - target: {fileID: 8466683960281627183, guid: 96c1b02a29de12e4a8aa2acd97bcd7bf, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: b0a6af9a59efc344e8b4f9fc93c66333, type: 2}
+      objectReference: {fileID: 9100000, guid: 5424edbf499b1e642a57c38c2f616f5a, type: 2}
     - target: {fileID: 8772693103843231552, guid: 96c1b02a29de12e4a8aa2acd97bcd7bf, type: 3}
       propertyPath: m_Name
       value: Pachycephalasaurus_Green

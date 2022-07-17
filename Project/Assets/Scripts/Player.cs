@@ -35,12 +35,8 @@ public class Player : BaseCharacter
     void Update()
     {
 
-
-
-        // Eventually Call It's Turn
-        TakeTurn();
     }
-    private void TakeTurn()
+    public void TakeTurn()
     {
         // Call the actions in a specific order, Block, Attack, Abilitiy
         Defense(defense);
