@@ -216,6 +216,8 @@ public class DefaultCanvas : MonoBehaviour
         abilityText.GetComponent<Text>().text = $"Heal: 0";
 
         player.GetComponent<Player>().TakeTurn();
+
+        rollNum = 0;
     }
 
     private IEnumerator Roll6b(int rollNum)
