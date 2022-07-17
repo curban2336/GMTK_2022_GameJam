@@ -6,6 +6,7 @@ using UnityEngine;
 public class Enemy : BaseCharacter
 {
     // Fields
+    public EnemySound sounds;
     protected Type.Mood currentMood;
     protected int blockRoll;
     [SerializeField] protected BaseCharacter player;
@@ -60,6 +61,7 @@ public class Enemy : BaseCharacter
                     // Roll all the d8s to deal damage
                     attack = AllD8s();
                     Strike(player, attack);
+                    sounds.Shoot();
                     break;
                 }
             case Type.Mood.BigAttack:
@@ -68,6 +70,7 @@ public class Enemy : BaseCharacter
                     attack = AllD6s();
                     attack = attack + AllD8s();
                     Strike(player, attack);
+                    sounds.Shoot();
                     break;
                 }
             case Type.Mood.Block:
@@ -83,6 +86,7 @@ public class Enemy : BaseCharacter
                     attack = AllD6s();
                     block += AllD8s();
                     Strike(player, attack);
+                    sounds.Shoot();
                     break;
                 }
             case Type.Mood.MultiAttack:
@@ -117,12 +121,14 @@ public class Enemy : BaseCharacter
                     // Strike the target for the d6s and d8s
                     for(int i = 0; i < numOfD6; i++)
                     {
+                        sounds.Shoot();
                         Strike(player, RollD6s());
                     }
 
                     // Strike for the D8s
                     for(int i = 0; i < numOfD8; i++)
                     {
+                        sounds.Shoot();
                         Strike(player, RollD8s());
                     }
 
@@ -321,6 +327,7 @@ public class Enemy : BaseCharacter
     protected override void Death()
     {
         // Call the Death Animation
+        sounds.Death();
         self.GetComponent<Animator>().Play("Die", 0, 0f);
         base.Death();
         

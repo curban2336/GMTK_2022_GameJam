@@ -10,6 +10,7 @@ public class Player : BaseCharacter
     private int healing;
     public List<BaseCharacter> enemyList;
     private BaseCharacter target;
+    public PlayerSounds sounds;
 
     // Properties
     public int Damage { set { damage = value; } }
@@ -38,6 +39,7 @@ public class Player : BaseCharacter
     }
     public void TakeTurn()
     {
+        sounds.Roar();
         // Call the actions in a specific order, Block, Attack, Abilitiy
         Defense(defense);
         HeadButt(target, damage);
@@ -47,6 +49,7 @@ public class Player : BaseCharacter
     }
     private void HeadButt(BaseCharacter target, int damage)
     {
+        sounds.Attack();
         self.GetComponent<Animator>().Play("Armature|Pachycephalasurus_HeadbuttCharged", 0, 0f);
         // We strike the enemy
         Strike(target, damage);
@@ -55,11 +58,13 @@ public class Player : BaseCharacter
 
     private void Defense(int defense)
     {
+        sounds.Roar();
         block += defense;
     }
 
     private void Special(int healing)
     {
+        sounds.Roar();
         //Player can't go above 100 in health
         health += healing;
         if(health > 100) { health = 100; }
@@ -74,6 +79,7 @@ public class Player : BaseCharacter
 
     protected override void Death()
     {
+        sounds.Death();
         // Call Death Animation
         base.Death();
     }
