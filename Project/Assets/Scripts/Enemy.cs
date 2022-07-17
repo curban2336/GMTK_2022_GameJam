@@ -13,8 +13,7 @@ public class Enemy : BaseCharacter
     // Properties
     public Type.Mood CurrentMood { get { return currentMood; } }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         // Initializing fields
         totalD6s = 3;
@@ -27,6 +26,12 @@ public class Enemy : BaseCharacter
         title = "Gigabyte";
         // Decide the starting mood
         currentMood = ChangeMood();
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
     }
 
     // Update is called once per frame
@@ -314,5 +319,10 @@ public class Enemy : BaseCharacter
         self.GetComponent<Animator>().Play("Die", 0, 0f);
         base.Death();
         
+    }
+    protected override void TakeDamage(int damage)
+    {
+        self.GetComponent<Animator>().Play("Die", 0, 0f);
+        base.TakeDamage(damage);
     }
 }

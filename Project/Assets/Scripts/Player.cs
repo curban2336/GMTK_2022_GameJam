@@ -8,21 +8,27 @@ public class Player : BaseCharacter
     private int damage;
     private int defense;
     private int healing;
-    private Enemy target;
+    public List<BaseCharacter> enemyList;
+    private BaseCharacter target;
 
     // Properties
     public int Damage { set { damage = value; } }
     public int Blocking { set { defense = value; } }
     public int Healing { set { healing = value; } }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         totalD12s = 1;
         totalD8s = 1;
         totalD6s = 1;
         health = 100;
         title = "Pachyderm";
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
     }
 
     // Update is called once per frame
@@ -43,7 +49,7 @@ public class Player : BaseCharacter
 
 
     }
-    private void HeadButt(Enemy target, int damage)
+    private void HeadButt(BaseCharacter target, int damage)
     {
         self.GetComponent<Animator>().Play("Armature|Pachycephalasurus_HeadbuttCharged", 0, 0f);
         // We strike the enemy
