@@ -67,6 +67,18 @@ public class DefaultCanvas : MonoBehaviour
     //End turn and begin dice roll result procedure
     public void EndTurn()
     {
+        int sixCount = 0;
+        int eightCount = 0;
+        int twelveCount = 0;
+
+        int rollNum = 0;
+
+        //haloB.enabled = true;
+
+        sixCount = manager.GetComponent<CanvasManager>().sixTallyB;
+        eightCount = manager.GetComponent<CanvasManager>().eightTallyB;
+        twelveCount = manager.GetComponent<CanvasManager>().twelveTallyB;
+
         dSix.SetActive(true);
         dSixText.SetActive(true);
         dEight.SetActive(true);
@@ -98,93 +110,186 @@ public class DefaultCanvas : MonoBehaviour
 
         int rollNum = 0;
 
-        //haloB.enabled = true;
-        Debug.Log("halo on");
 
         sixCount = manager.GetComponent<CanvasManager>().sixTallyB;
         eightCount = manager.GetComponent<CanvasManager>().eightTallyB;
         twelveCount = manager.GetComponent<CanvasManager>().twelveTallyB;
 
-        Debug.Log("Problem test");
-        yield return new WaitForSecondsRealtime(1);
-        Debug.Log("Problem test");
+        blockText.GetComponent<Text>().color = new Color(1f, 1f, 1f);
+        attackText.GetComponent<Text>().color = new Color(0f, 0f, 0f);
+        abilityText.GetComponent<Text>().color = new Color(0f, 0f, 0f);
 
-        for(int i = 0; i < sixCount; i++)
+        Debug.Log(player.GetComponent<Player>().RollD6s());
+        yield return new WaitForSeconds(1);
+
+        for (int i = 0; i <= sixCount - 1; i++)
         {
-            rollNum = player.GetComponent<Player>().RollD6s();
-            blockCount += rollNum;
-            sixRoll = true;
-            yield return new WaitForSecondsRealtime(1);
-            sixRoll = false;
-            dSixText.GetComponent<Text>().text = $"{rollNum}";
-            yield return new WaitForSecondsRealtime(0);
-            blockText.GetComponent<Text>().text = $"Block: {blockCount}";
+            yield return StartCoroutine(Roll6b(rollNum));
         }
-        Debug.Log("d6s");
 
-        for (int i = 0; i < eightCount; i++)
+        for (int i = 0; i <= eightCount - 1; i++)
         {
-            rollNum = player.GetComponent<Player>().RollD8s();
-            blockCount += rollNum;
-            eightRoll = true;
-            yield return new WaitForSecondsRealtime(1);
-            eightRoll = false;
-            Debug.Log("Stop Rolling");
-            dEightText.GetComponent<Text>().text = $"{rollNum}";
-            yield return new WaitForSecondsRealtime(0);
-            blockText.GetComponent<Text>().text = $"Block: {blockCount}";
+            yield return StartCoroutine(Roll8b(rollNum));
         }
-        Debug.Log("d8s");
 
-        for (int i = 0; i < twelveCount; i++)
+        for (int i = 0; i <= twelveCount - 1; i++)
         {
-            rollNum = player.GetComponent<Player>().RollD12s();
-            blockCount += rollNum;
-            twelveRoll = true;
-            yield return new WaitForSecondsRealtime(1);
-            twelveRoll = false;
-            dTwelveText.GetComponent<Text>().text = $"{rollNum}";
-            yield return new WaitForSecondsRealtime(0);
-            blockText.GetComponent<Text>().text = $"Block: {blockCount}";
+            yield return StartCoroutine(Roll12b(rollNum));
         }
-        Debug.Log("d12s");
 
-        //haloB.enabled = false;
+        sixCount = manager.GetComponent<CanvasManager>().sixTallyAt;
+        eightCount = manager.GetComponent<CanvasManager>().eightTallyAt;
+        twelveCount = manager.GetComponent<CanvasManager>().twelveTallyAt;
+
+        blockText.GetComponent<Text>().color = new Color(0f, 0f, 0f);
+        attackText.GetComponent<Text>().color = new Color(1f, 1f, 1f);
+        abilityText.GetComponent<Text>().color = new Color(0f, 0f, 0f);
+
+        yield return new WaitForSeconds(1);
+
+        for (int i = 0; i <= sixCount - 1; i++)
+        {
+            yield return StartCoroutine(Roll6At(rollNum));
+        }
+
+        for (int i = 0; i <= eightCount - 1; i++)
+        {
+            yield return StartCoroutine(Roll8At(rollNum));
+        }
+
+        for (int i = 0; i <= twelveCount - 1; i++)
+        {
+            yield return StartCoroutine(Roll12At(rollNum));
+        }
+
+        sixCount = manager.GetComponent<CanvasManager>().sixTallyAb;
+        eightCount = manager.GetComponent<CanvasManager>().eightTallyAb;
+        twelveCount = manager.GetComponent<CanvasManager>().twelveTallyAb;
+
+        blockText.GetComponent<Text>().color = new Color(0f, 0f, 0f);
+        attackText.GetComponent<Text>().color = new Color(0f, 0f, 0f);
+        abilityText.GetComponent<Text>().color = new Color(1f, 1f, 1f);
+
+        yield return new WaitForSeconds(1);
+
+        for (int i = 0; i <= sixCount - 1; i++)
+        {
+            yield return StartCoroutine(Roll6At(rollNum));
+        }
+
+        for (int i = 0; i <= eightCount - 1; i++)
+        {
+            yield return StartCoroutine(Roll8At(rollNum));
+        }
+
+        for (int i = 0; i <= twelveCount - 1; i++)
+        {
+            yield return StartCoroutine(Roll12At(rollNum));
+        }
+    }
+
+    private IEnumerator Roll6b(int rollNum)
+    {
+        rollNum = player.GetComponent<Player>().RollD6s();
+        blockCount += rollNum;
+        dSix.GetComponent<Animator>().Play("Rotate", 0, 0f);
+        yield return new WaitForSeconds(1);
+        dSixText.GetComponent<Text>().text = $"{rollNum}";
+        blockText.GetComponent<Text>().text = $"Block: {blockCount}";
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    private IEnumerator Roll8b(int rollNum)
+    {
+        rollNum = player.GetComponent<Player>().RollD8s();
+        blockCount += rollNum;
+        dEight.GetComponent<Animator>().Play("Rotate", 0, 0f);
+        yield return new WaitForSeconds(1);
+        dEightText.GetComponent<Text>().text = $"{rollNum}";
+        blockText.GetComponent<Text>().text = $"Block: {blockCount}";
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    private IEnumerator Roll12b(int rollNum)
+    {
+        rollNum = player.GetComponent<Player>().RollD12s();
+        blockCount += rollNum;
+        dTwelve.GetComponent<Animator>().Play("Rotate", 0, 0f);
+        yield return new WaitForSeconds(1);
+        dTwelveText.GetComponent<Text>().text = $"{rollNum}";
+        blockText.GetComponent<Text>().text = $"Block: {blockCount}";
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    private IEnumerator Roll6At(int rollNum)
+    {
+        rollNum = player.GetComponent<Player>().RollD6s();
+        attackCount += rollNum;
+        dSix.GetComponent<Animator>().Play("Rotate", 0, 0f);
+        yield return new WaitForSeconds(1);
+        dSixText.GetComponent<Text>().text = $"{rollNum}";
+        attackText.GetComponent<Text>().text = $"Attack: {attackCount}";
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    private IEnumerator Roll8At(int rollNum)
+    {
+        rollNum = player.GetComponent<Player>().RollD8s();
+        attackCount += rollNum;
+        dEight.GetComponent<Animator>().Play("Rotate", 0, 0f);
+        yield return new WaitForSeconds(1);
+        dEightText.GetComponent<Text>().text = $"{rollNum}";
+        attackText.GetComponent<Text>().text = $"Attack: {attackCount}";
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    private IEnumerator Roll12At(int rollNum)
+    {
+        rollNum = player.GetComponent<Player>().RollD12s();
+        attackCount += rollNum;
+        dTwelve.GetComponent<Animator>().Play("Rotate", 0, 0f);
+        yield return new WaitForSeconds(1);
+        dTwelveText.GetComponent<Text>().text = $"{rollNum}";
+        attackText.GetComponent<Text>().text = $"Attack: {attackCount}";
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    private IEnumerator Roll6Ab(int rollNum)
+    {
+        rollNum = player.GetComponent<Player>().RollD6s();
+        abilityCount += rollNum;
+        dSix.GetComponent<Animator>().Play("Rotate", 0, 0f);
+        yield return new WaitForSeconds(1);
+        dSixText.GetComponent<Text>().text = $"{rollNum}";
+        abilityText.GetComponent<Text>().text = $"Heal: {attackCount}";
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    private IEnumerator Roll8Ab(int rollNum)
+    {
+        rollNum = player.GetComponent<Player>().RollD8s();
+        abilityCount += rollNum;
+        dEight.GetComponent<Animator>().Play("Rotate", 0, 0f);
+        yield return new WaitForSeconds(1);
+        dEightText.GetComponent<Text>().text = $"{rollNum}";
+        abilityText.GetComponent<Text>().text = $"Heal: {abilityCount}";
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    private IEnumerator Roll12Ab(int rollNum)
+    {
+        rollNum = player.GetComponent<Player>().RollD12s();
+        abilityCount += rollNum;
+        dTwelve.GetComponent<Animator>().Play("Rotate", 0, 0f);
+        yield return new WaitForSeconds(1);
+        dTwelveText.GetComponent<Text>().text = $"{rollNum}";
+        abilityText.GetComponent<Text>().text = $"Heal: {abilityCount}";
+        yield return new WaitForSeconds(0.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        while (sixRoll)
-        {
-            Debug.Log("Start roll");
-            dSix.transform.rotation = Quaternion.Slerp(dSix.transform.rotation, new Quaternion(0, 0, 360, 0), 0.2f);
-            Debug.Log("Rolling!!!");
-            if(dSix.transform.rotation.z >= 360)
-            {
-                dSix.transform.rotation = new Quaternion(0, 0, 0, 0);
-            }
-        }
-        dSix.transform.rotation = new Quaternion(0, 0, 0, 0);
 
-        while (eightRoll)
-        {
-            dEight.transform.rotation = Quaternion.Slerp(dEight.transform.rotation, new Quaternion(0, 0, 360, 0), 0.2f);
-            if (dEight.transform.rotation.z >= 360)
-            {
-                dEight.transform.rotation = new Quaternion(0, 0, 0, 0);
-            }
-        }
-        dEight.transform.rotation = new Quaternion(0, 0, 0, 0);
-
-        while (twelveRoll)
-        {
-            dTwelve.transform.rotation = Quaternion.Slerp(dTwelve.transform.rotation, new Quaternion(0, 0, 360, 0), 0.2f);
-            if (dTwelve.transform.rotation.z >= 360)
-            {
-                dTwelve.transform.rotation = new Quaternion(0, 0, 0, 0);
-            }
-        }
-        dTwelve.transform.rotation = new Quaternion(0, 0, 0, 0);
     }
 }
