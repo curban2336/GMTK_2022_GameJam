@@ -8,8 +8,8 @@ public class Player : BaseCharacter
     private int damage;
     private int defense;
     private int healing;
-    //public List<BaseCharacter> enemyList;
-    [SerializeField] private BaseCharacter target;
+    public List<BaseCharacter> enemyList;
+    private BaseCharacter target;
 
     // Properties
     public int Damage { set { damage = value; } }

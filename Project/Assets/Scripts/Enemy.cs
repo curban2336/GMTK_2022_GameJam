@@ -37,6 +37,11 @@ public class Enemy : BaseCharacter
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    public void TakeTurn()
+    {
         // Start of the turn it will clear it's attack
         attack = 0;
         // On the enemies turn it will Fight based off of mood, then it will change mood
