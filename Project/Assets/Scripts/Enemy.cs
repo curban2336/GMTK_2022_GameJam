@@ -37,7 +37,7 @@ public class Enemy : BaseCharacter
     // Update is called once per frame
     void Update()
     {
-        
+        Animations();
     }
 
     public void TakeTurn()
