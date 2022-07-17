@@ -26,6 +26,8 @@ public class BaseCharacter : MonoBehaviour
     protected int totalD12s;
     protected string title;
 
+    public bool dead = false;
+
 
     [SerializeField]
     protected GameObject self;
@@ -101,7 +103,8 @@ public class BaseCharacter : MonoBehaviour
     {
         if(health <= 0)
         {
-            // Destroys the object?
+            dead = true;
+            self.SetActive(false);
         }
     }
 

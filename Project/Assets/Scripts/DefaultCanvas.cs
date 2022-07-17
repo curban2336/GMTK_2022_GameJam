@@ -28,6 +28,8 @@ public class DefaultCanvas : MonoBehaviour
     [SerializeField] bool eightRoll = false;
     [SerializeField] bool twelveRoll = false;
 
+    public bool victory = false;
+
     //counts for the total roll results per action
     public int blockCount = 0;
     public int attackCount = 0;
@@ -208,6 +210,12 @@ public class DefaultCanvas : MonoBehaviour
 
         aDice.SetActive(true);
         eTurn.SetActive(true);
+
+        blockText.GetComponent<Text>().text = $"Block: 0";
+        attackText.GetComponent<Text>().text = $"Attack: 0";
+        abilityText.GetComponent<Text>().text = $"Heal: 0";
+
+        player.GetComponent<Player>().TakeTurn();
     }
 
     private IEnumerator Roll6b(int rollNum)
@@ -312,6 +320,10 @@ public class DefaultCanvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (victory)
+        {
+            aDice.SetActive(false);
+            eTurn.SetActive(false);
+        }
     }
 }
